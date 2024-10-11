@@ -43,10 +43,10 @@
     function qa_get_request_content()
     {
 
-        $requestlower = strtolower( qa_request() );
+        $requestlower = strtolower( qa_request() ?? '' );
         $requestparts = qa_request_parts();
-        $firstlower = strtolower( @$requestparts[0] );
-        $secondlower = strtolower( @$requestparts[1] );
+        $firstlower = strtolower( @$requestparts[0] ?? '' );
+        $secondlower = strtolower( @$requestparts[1] ?? '' );
         $routing = qa_page_routing();
 
         $route_part = '';

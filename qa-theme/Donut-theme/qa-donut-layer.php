@@ -507,6 +507,12 @@
                 unset( $this->content['navigation']['main'] );
             }
         }
+		
+		function nav_user_search(){
+			// Will be populated by plugins
+			// Handles plugins preppends/appends to User Navigation
+			// Function's name is legacy from SnowFlat theme. but many modern themes use it, since they're derived from SnowFlat
+		}
 
         /**
          * prints the complete navbar

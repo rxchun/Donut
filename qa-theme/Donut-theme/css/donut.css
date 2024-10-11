@@ -506,6 +506,14 @@ header#nav-header {
   .navbar-nav > li > a:focus {
     background-color: #fff;
   }
+  .user-nav {
+    display: flex !important;
+    align-items: center;
+  }
+  .user-nav li {
+    margin-left: 6px;
+    vertical-align: middle;
+  }
 }
 /* small caret at the dropdown menu */
 .navbar-nav:not(.navbar-right) li .dropdown-menu {
@@ -584,7 +592,7 @@ header#nav-header {
 }
 /*Styling for the Onsite Noification*/
 #osnbox {
-  margin-top: 15px;
+  padding-top: 8px;
 }
 .qa-form-wide-button:before,
 .qa-form-tall-button:before,

@@ -5,7 +5,7 @@
     }
 
     require_once QA_INCLUDE_DIR . '/app/admin.php';
-    $adminsection = strtolower( qa_request_part( 2 ) );
+    $adminsection = strtolower( qa_request_part( 2 ) ?? '' );
 
     //	Get list of categories and all options
 
