@@ -986,7 +986,7 @@
 
         public function error( $error )
         {
-            if ( strlen( $error ) ) {
+            if ( strlen( $error ?? '') ) {
                 $this->output(
                         '<div class="donut-error alert alert-dismissible" role="alert">',
                         $error,
@@ -1152,7 +1152,7 @@
 
         function truncate( $string, $limit, $pad = "..." )
         {
-            if ( strlen( $string ) <= $limit )
+            if ( strlen( $string ?? '') <= $limit )
                 return $string;
             else {
                 $text = $string . ' ';
