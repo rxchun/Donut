@@ -13,10 +13,20 @@
 
 ?>
 <ul class="nav navbar-nav navbar-right user-nav">
-    <li class="notf-bubble visible-lg">
-        <?php 
-			// This appends more content than just the q2apro_onsitenotifications plugin
-			// q2apro_onsitenotifications already checks it it's enabled. So we can delete the old check
+    <?php if (qa_opt('q2apro_onsitenotifications_enabled') && !empty($this->content['loggedin']['suffix'])): ?>
+	<li class="notf-bubble visible-lg">
+		<?php 
+			// Keep this here as a fallback in case people update the theme, but NOT the plugin.
+			// This will be empty for newer versions of the plugin.
+			echo $this->content['loggedin']['suffix'];
+		?>
+    </li>
+    <?php endif ?>
+	<li class="notf-bubble visible-lg">
+		<?php 
+			// For newer versions of the q2apro_onsitenotifications plugin, the Bell will output here.
+			// This is also used to append other stuff/icons from other plugins,
+			// so we cannot use the qa_opt('q2apro_onsitenotifications_enabled') check here.
 			echo $this->nav_user_search();
 		?>
     </li>
