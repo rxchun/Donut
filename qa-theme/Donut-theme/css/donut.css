@@ -3268,6 +3268,8 @@ a.qa-browse-cat-link:visited {
 }
 .qa-q-view .qa-voting {
   width: 75px;
+  position: relative;
+  z-index: 1;
 }
 @media only screen and (max-width: 767px) {
   .qa-q-view .qa-voting {
